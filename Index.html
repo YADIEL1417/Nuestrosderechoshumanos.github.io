@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Derechos Humanos</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700;800;900&family=Montserrat:wght@400;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Estilos CSS Internos para un diseño futurista y atractivo --- */
+
+        /* Variables de color (inspiradas en Handsome, con toques de azul y acentos vibrantes) */
+        :root {
+            --primary-dark: #1A2930; /* Azul oscuro casi negro, base futurista */
+            --secondary-blue: #3E5C76; /* Azul medio, para contrastes */
+            --accent-green: #00BFB2; /* Verde azulado vibrante, toque futurista */
+            --light-grey-bg: #EAECEF; /* Fondo gris claro suave para secciones */
+            --text-light: #F0F2F5; /* Texto para fondos oscuros */
+            --text-dark: #2c3e50; /* Texto para fondos claros, un azul oscuro para mejor contraste */
+            --white: #ffffff;
+            --overlay-color-hero: rgba(26, 41, 48, 0.75); /* Oscurecimiento para hero */
+            --overlay-color-body: rgba(255, 255, 255, 0.95); /* Superposición más opaca para el fondo global */
+        }
+
+        /* Estilos Generales del Cuerpo con imagen de fondo temática */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: var(--text-dark); /* Color de texto predeterminado */
+            background-color: var(--light-grey-bg); /* Color de fallback */
+            background-image: url('https://images.unsplash.com/photo-1599818817297-f4955b2723c3?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Fondo global: Balanza de justicia */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            position: relative; /* Necesario para la superposición */
+            z-index: -2; /* Para que la superposición esté detrás */
+            scroll-behavior: smooth;
+        }
+
+        /* Superposición para difuminar el fondo global y mejorar legibilidad */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-color-body);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Tipografía y Encabezados */
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3.8em; font-weight: 800; text-transform: uppercase; }
+        h2 {
+            font-size: 2.8em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 0.5px; /* Ligeramente más espaciado para atractivo */
+        }
+        h3 {
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: 0.3px; /* Ligeramente más espaciado para atractivo */
+        }
+        h4 { font-size: 1.7em; font-weight: 600; }
+
+        p {
+            margin-bottom: 1.4em;
+            font-size: 1.1em;
+            color: var(--text-dark); /* Asegura que el texto general sea oscuro */
+        }
+
+        a {
+            color: var(--secondary-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Botones con diseño futurista */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--primary-dark);
+            padding: 16px 35px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0, 191, 178, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #00A69A;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 191, 178, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-blue);
+            color: var(--text-light);
+            box-shadow: 0 6px 15px rgba(62, 92, 118, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: #314C65;
+            color: var(--text-light);
+            box-shadow: 0 8px 20px rgba(62, 92, 118, 0.4);
+        }
+
+        .btn-small {
+            padding: 12px 25px;
+            font-size: 1em;
+        }
+
+        /* --- Header y Navegación (Estilo pulcro y moderno) --- */
+        header {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--accent-green); /* Título del logo en color que resalta */
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 5px rgba(0, 191, 178, 0.6); /* Sombra para resaltar */
+            font-family: 'Rajdhani', sans-serif;
+        }
+        .logo span {
+            color: var(--accent-green); /* Mantener si hubieran subpartes del logo */
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-weight: 800; /* Más negrita para los enlaces */
+            font-size: 1.2em;
+            padding: 10px 0;
+            position: relative;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px; /* Espaciado entre letras para atractivo */
+            text-shadow: 0 0 5px rgba(255,255,255,0.3); /* Sombra sutil para legibilidad */
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--accent-green);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+            text-shadow: 0 0 10px rgba(0, 191, 178, 0.6); /* Sombra más pronunciada al pasar el ratón */
+        }
+
+        /* Menú Hamburguesa para Móviles */
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 32px;
+            height: 4px;
+            background-color: var(--text-light);
+            margin: 6px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .burger.toggle .line1 { transform: rotate(-45deg) translate(-8px, 8px); }
+        .burger.toggle .line2 { opacity: 0; }
+        .burger.toggle .line3 { transform: rotate(45deg) translate(-8px, -8px); }
+
+        /* --- Hero Section (Impactante y con fondo dinámico) --- */
+        .hero-section {
+            background: var(--overlay-color-hero), url('https://images.unsplash.com/photo-1579737955519-7e53f191143c?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat fixed; /* Fondo: Sede ONU */
+            color: var(--text-light);
+            text-align: center;
+            padding: 180px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 700px;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(0,0,0,0.05),
+                rgba(0,0,0,0.05) 5px,
+                transparent 5px,
+                transparent 10px
+            );
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h2 {
+            font-size: 4.8em;
+            margin-bottom: 30px;
+            color: var(--text-light);
+            line-height: 1.1;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 900; /* Mayor peso para más impacto */
+            letter-spacing: 2px; /* Mayor espaciado */
+        }
+
+        .hero-section p {
+            font-size: 1.8em;
+            margin-bottom: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* --- Secciones de Contenido General --- */
+        .content-section {
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--overlay-color-body); /* Fondo semi-transparente para la legibilidad */
+        }
+
+        .content-section h2 {
+            margin-bottom: 70px;
+            position: relative;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700; /* Ligeramente más negrita */
+            color: var(--primary-dark); /* Títulos en color oscuro para contraste con el fondo claro de la sección */
+        }
+
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 6px;
+            background-color: var(--accent-green);
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+            box-shadow: 0 0 15px var(--accent-green);
+        }
+
+        .content-section p {
+            max-width: 950px;
+            margin: 0 auto 40px auto;
+            font-size: 1.15em;
+        }
+
+        .light-bg {
+            background-color: var(--light-grey-bg);
+            box-shadow: inset 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* --- Sección de Proyecto Destacado (Imagen del Grupo 1) --- */
+        #proyecto-destacado {
+            background-color: var(--primary-dark); /* Fondo oscuro para resaltar */
+            color: var(--text-light);
+            padding: 100px 0;
+            border-top: 5px solid var(--accent-green);
+            border-bottom: 5px solid var(--secondary-blue);
+        }
+        #proyecto-destacado .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        #proyecto-destacado h2 {
+            color: var(--text-light);
+        }
+        #proyecto-destacado h2::after {
+            background-color: var(--text-light);
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+        .project-highlight-card {
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .project-highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+        }
+        .project-highlight-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 3px solid var(--accent-green);
+            transition: transform 0.3s ease;
+        }
+        .project-highlight-card img:hover {
+            transform: scale(1.02);
+        }
+        .project-highlight-card h3 {
+            color: var(--accent-green);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .project-highlight-card p {
+            color: var(--text-light); /* Texto claro sobre fondo oscuro */
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        /* --- Grid de Proyectos (Tarjetas con diseño moderno) --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 8px solid var(--secondary-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(62,92,118,0.05), transparent 30%);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .project-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700; /* Ligeramente más negrita */
+        }
+
+        .project-card p {
+            font-size: 1.05em;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            flex-grow: 1;
+            color: var(--text-dark); /* Asegura que el texto sea oscuro */
+        }
+
+        /* --- Artículos Clave de la DUDH - Código Esencial --- */
+        .article-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .article-item {
+            background-color: var(--white);
+            border-left: 6px solid var(--accent-green);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .article-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .article-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: var(--secondary-blue);
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            opacity: 0.1;
+        }
+
+        .article-item h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+        }
+
+        .article-item p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: var(--text-dark); /* Asegura que el texto sea oscuro */
+        }
+
+        /* --- Sección de Video Destacado --- */
+        #video-destacado {
+            background-color: var(--primary-dark);
+            padding: 100px 0;
+            text-align: center;
+            border-top: 5px solid var(--accent-green);
+            border-bottom: 5px solid var(--accent-green);
+            color: var(--text-light);
+        }
+        #video-destacado h2 {
+            color: var(--text-light);
+        }
+        #video-destacado h2::after {
+            background-color: var(--text-light);
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            margin: 50px auto 0 auto;
+            max-width: 900px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border: 3px solid var(--accent-green);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        /* --- Recursos Adicionales (Estilo de chips/etiquetas) --- */
+        #recursos ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        #recursos li {
+            margin-bottom: 0;
+            font-size: 1.15em;
+        }
+
+        #recursos li a {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 30px;
+            border-radius: 40px;
+            background-color: rgba(0, 191, 178, 0.1);
+            color: var(--primary-dark);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 600;
+            border: 1px solid rgba(0, 191, 178, 0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        #recursos li a:hover {
+            background-color: var(--accent-green);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 191, 178, 0.4);
+        }
+
+        /* --- Sección de Creadores --- */
+        #creadores {
+            background-color: var(--secondary-blue);
+            color: var(--text-light);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--accent-green);
+            border-bottom: 5px solid var(--accent-green);
+        }
+
+        #creadores h2 {
+            color: var(--text-light);
+            margin-bottom: 60px;
+        }
+        #creadores h2::after {
+            background-color: var(--text-light);
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+
+        .creators-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .creator-info {
+            background-color: rgba(0,0,0,0.2);
+            padding: 30px 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .creator-info h3 {
+            color: var(--accent-green);
+            margin-bottom: 10px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .creator-info p {
+            color: var(--text-light);
+            font-size: 1.05em;
+            margin-bottom: 0;
+        }
+        .institution-logo {
+            margin-top: 40px;
+            filter: drop-shadow(0 0 15px rgba(0, 191, 178, 0.5));
+            max-width: 150px;
+            height: auto;
+            opacity: 0.9;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .institution-logo:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+
+        /* --- Formulario de Contacto (Limpio y moderno) --- */
+        .contact-form {
+            max-width: 750px;
+            margin: 60px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: left;
+            border-top: 5px solid var(--accent-green);
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 18px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1.05em;
+            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+            background-color: var(--light-grey-bg);
+            color: var(--text-dark);
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 4px rgba(0, 191, 178, 0.2);
+            outline: none;
+            background-color: var(--white);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 180px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.95em;
+            margin-top: 100px;
+            border-top: 3px solid var(--secondary-blue);
+        }
+
+        footer p {
+            margin: 0;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* --- Media Queries para Responsive Design (Mobile First) --- */
+        @media (max-width: 1024px) {
+            .hero-section h2 { font-size: 4em; }
+            .hero-section p { font-size: 1.6em; }
+            .content-section h2 { font-size: 2.5em; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8em; }
+            h2 { font-size: 2.2em; }
+            h3 { font-size: 1.8em; }
+            .hero-section {
+                padding: 120px 20px;
+                min-height: 500px;
+            }
+            .hero-section h2 { font-size: 3.2em; }
+            .hero-section p { font-size: 1.4em; }
+            .content-section { padding: 80px 0; }
+            .content-section h2 { margin-bottom: 50px; }
+
+            /* Navegación para móvil */
+            .nav-links {
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                background-color: var(--primary-dark);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 75%;
+                transform: translateX(100%);
+                transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+                z-index: 999;
+                box-shadow: -8px 0 20px rgba(0,0,0,0.3);
+            }
+
+            .nav-links li {
+                margin: 30px 0;
+                opacity: 0;
+            }
+
+            .nav-links li a {
+                font-size: 1.7em;
+                color: var(--text-light);
+            }
+            .nav-links a::after {
+                background: var(--accent-green);
+            }
+
+            .nav-links.nav-active {
+                transform: translateX(0%);
+            }
+
+            .nav-links.nav-active li {
+                animation: navLinkFade 0.5s ease forwards var(--delay);
+            }
+
+            .burger {
+                display: block;
+            }
+
+            @keyframes navLinkFade {
+                from { opacity: 0; transform: translateX(50px); }
+                to { opacity: 1; transform: translateX(0px); }
+            }
+
+            .project-grid, .article-list {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-card, .article-item, .contact-form {
+                padding: 30px;
+            }
+            .creator-info {
+                padding: 25px 30px;
+            }
+            #proyecto-destacado .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .project-highlight-card {
+                padding: 30px;
+            }
+            .video-container {
+                margin: 30px auto 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .hero-section h2 { font-size: 2.5em; letter-spacing: 1px;}
+            .hero-section p { font-size: 1.1em; }
+            .content-section { padding: 60px 0; }
+            .btn { padding: 10px 20px; font-size: 0.95em; }
+            .nav-links { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Los Derechos Humanos</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#proyecto-destacado">Proyecto Destacado</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#video-destacado">Video</a></li> 
+<li><a href="#articulos">Artículos</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#creadores">Creadores</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Yo Tengo Derechos y los Exijo</h2>
+                <p>Nuestra voz es el motor del cambio. Este espacio es una plataforma dedicada a educar, empoderar y demandar el respeto universal a la dignidad inherente de cada ser humano en cada rincón del planeta.</p>
+                <a href="#introduccion" class="btn">Conoce Tus Derechos</a>
+            </div>
+        </section>
+
+        
+<section id="introduccion" class="content-section">
+            <div class="container">
+                <h2>Pilares Fundamentales de la Convivencia</h2>
+                <p>Los Derechos Humanos son un conjunto de prerrogativas fundamentales inherentes a la persona, cuya realización efectiva resulta indispensable para el desarrollo integral del individuo que vive en sociedad. Estos derechos, reconocidos por la comunidad internacional, son universales, interdependientes, indivisibles y progresivos. No son un privilegio, sino una condición básica para una vida digna.</p>
+                <p>Desde la histórica Declaración Universal de Derechos Humanos de 1948, la humanidad ha avanzado significativamente en su reconocimiento, pero la lucha por su plena implementación continúa. En la era digital, surgen nuevos desafíos relacionados con la privacidad, la libertad de expresión en línea y el acceso equitativo a la tecnología. Es nuestra responsabilidad colectiva proteger y promover estos valores esenciales para garantizar un futuro justo y equitativo para todos.</p>
+                <p>Comprender los Derechos Humanos no es solo adquirir conocimiento, es adquirir una herramienta para la acción y la transformación social. Es la base para construir una sociedad donde la justicia y la equidad prevalezcan para todos, sin importar su origen, condición o creencia.</p>
+            </div>
+        </section>
+
+        
+<section id="proyecto-destacado" class="content-section">
+            <div class="container">
+                <h2>Proyecto Destacado: "Voces por la Dignidad"</h2>
+                <div class="project-highlight-card">
+                    <img src="IMAGENES 2/IMAGEN 2.jpg" alt="Proyecto del Grupo 1 - Voces por la Dignidad">
+                    <h3>"Voces por la Dignidad: Sensibilizando sobre los Derechos Humanos"</h3>
+                    <p>"Voces por la Dignidad" es un grupo comprometido con la promoción y defensa de los derechos humanos. A través de nuestra maqueta, representamos de manera creativa y educativa los principios fundamentales establecidos en la Declaración Universal de los Derechos Humanos. Nuestro objetivo es sensibilizar a la comunidad sobre la importancia de respetar y garantizar estos derechos para todos, fomentando la empatía, la justicia y la equidad en nuestra sociedad.</p>
+                    <a href="https://www.youtube.com/watch?v=F_f4Gj0jXpA" target="_blank" class="btn btn-small btn-secondary">Ver Presentación del Proyecto</a>
+                </div>
+                <p style="margin-top: 40px; color: var(--text-light);">Este proyecto es un claro ejemplo de la creatividad y el compromiso de nuestros estudiantes con las causas sociales, transformando conceptos abstractos en expresiones visuales impactantes.</p>
+            </div>
+        </section>
+
+        
+<section id="proyectos" class="content-section light-bg">
+            <div class="container">
+                <h2>Nuestros Proyectos en Acción: Transformando Ideas en Realidad</h2>
+                <p>Explora una selección de proyectos innovadores desarrollados por nuestros estudiantes, cada uno abordando un aspecto crucial de los Derechos Humanos y proponiendo soluciones creativas para los desafíos contemporáneos.</p>
+                <div class="project-grid">
+                    
+<div class="project-card">
+                        <h3>Acceso al Agua Potable: Un Derecho Universal</h3>
+                        <p>Investigación y propuestas comunitarias sobre la gestión sostenible del agua, destacando el derecho fundamental al acceso a agua limpia y segura para todas las personas, especialmente en zonas vulnerables. Incluye un plan de concientización.</p>
+                        <a href="https://www.unicef.org/es/agua-saneamiento-higiene" target="_blank" class="btn btn-secondary btn-small">Ver Investigación</a>
+                    </div>
+                    
+<div class="project-card">
+                        <h3>Erradicación del Trabajo Infantil: Futuros Libres</h3>
+                        <p>Campaña de sensibilización y análisis de las causas y consecuencias del trabajo infantil, enfatizando el derecho de los niños a la educación, la recreación y un desarrollo pleno, libres de explotación laboral.</p>
+                        <a href="https://www.ilo.org/global/topics/child-labour/lang--es/index.htm" target="_blank" class="btn btn-secondary btn-small">Conoce la Campaña</a>
+                    </div>
+                    
+<div class="project-card">
+                        <h3>Diversidad e Inclusión: Respeto a la Identidad</h3>
+                        <p>Proyecto interdisciplinario centrado en promover el respeto a la diversidad cultural, sexual y de género. Se abordan los derechos a la no discriminación y al reconocimiento de la identidad como pilares de una sociedad inclusiva.</p>
+                        <a href="https://www.un.org/sustainabledevelopment/es/gender-equality/" target="_blank" class="btn btn-secondary btn-small">Explorar Iniciativa</a>
+                    </div>
+                    
+<div class="project-card">
+                        <h3>Libertad de Prensa y la Verdad</h3>
+                        <p>Análisis crítico sobre la importancia de la libertad de prensa como un pilar democrático para garantizar el derecho a la información veraz. Incluye un estudio de casos de censura y persecución a periodistas.</p>
+                        <a href="https://es.unesco.org/themes/libertad-expresion" target="_blank" class="btn btn-secondary btn-small">Ver Análisis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<section id="video-destacado" class="content-section">
+            <div class="container">
+                <h2>Video Destacado: Un Mensaje Visual</h2>
+                <p>Sumérgete en este video para comprender de manera dinámica la importancia fundamental de los Derechos Humanos en la vida de cada persona y sociedad.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Mu4Le-zAs4k?si=dlcIU-G4vnhQUgKo&start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        
+<section id="articulos" class="content-section">
+            <div class="container">
+                <h2>El Código Esencial: Artículos Fundamentales de la DUDH</h2>
+                <p>La Declaración Universal de Derechos Humanos (DUDH) es la piedra angular de la legislación internacional en materia de derechos humanos. Compuesta por 30 artículos, es un ideal común por el que todos los pueblos y naciones deben esforzarse.</p>
+                <div class="article-list">
+                    
+<div class="article-item">
+                        <h3>Art. 1: Todos Nacemos Libres e Iguales</h3>
+                        <p>Todos los seres humanos nacen libres e iguales en dignidad y derechos. Dotados de razón y conciencia, deben actuar fraternalmente los unos con los otros. Este artículo es la base de toda la declaración.</p>
+                    </div>
+                    
+<div class="article-item">
+                        <h3>Art. 3: Derecho a la Vida, Libertad y Seguridad</h3>
+                        <p>Todo individuo tiene derecho a la vida, a la libertad y a la seguridad de su persona. Es el derecho más fundamental, sin el cual, los demás derechos carecen de sentido.</p>
+                    </div>
+                    
+<div class="article-item">
+                        <h3>Art. 5: Prohibición de la Tortura</h3>
+                        <p>Nadie será sometido a torturas ni a penas o tratos crueles, inhumanos o degradantes. Este derecho es absoluto y no admite excepciones bajo ninguna circunstancia.</p>
+                    </div>
+                    
+<div class="article-item">
+                        <h3>Art. 12: Derecho a la Privacidad</h3>
+                        <p>Nadie será objeto de injerencias arbitrarias en su vida privada, su familia, su domicilio o su correspondencia, ni de ataques a su honra o a su reputación. Toda persona tiene derecho a la protección de la ley contra tales injerencias o ataques.</p>
+                    </div>
+                    
+<div class="article-item">
+                        <h3>Art. 19: Libertad de Opinión y Expresión</h3>
+                        <p>Todo individuo tiene derecho a la libertad de opinión y de expresión; este derecho incluye el de no ser molestado a causa de sus opiniones, el de investigar y recibir informaciones y opiniones, y el de difundirlas, sin limitación de fronteras, por cualquier medio de expresión.</p>
+                    </div>
+                    
+<div class="article-item">
+                        <h3>Art. 26: El Derecho a la Educación</h3>
+                        <p>Toda persona tiene derecho a la educación. La educación debe ser gratuita, al menos en lo concerniente a la instrucción elemental y fundamental. La instrucción técnica y profesional habrá de ser generalizada; el acceso a los estudios superiores será igual para todos, en función de los méritos respectivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<section id="recursos" class="content-section light-bg">
+            <div class="container">
+                <h2>Bases de Datos y Conexiones Cruciales</h2>
+                <p>Aquí encontrarás una selección de enlaces a organizaciones líderes y documentos fundamentales que te permitirán profundizar en el estudio y la acción a favor de los Derechos Humanos.</p>
+                <ul>
+                    <li><a href="https://www.un.org/es/udhr/" target="_blank">Declaración Universal de Derechos Humanos (ONU)</a></li>
+                    <li><a href="https://www.ohchr.org/es" target="_blank">Oficina del Alto Comisionado de la ONU para los DDHH</a></li>
+                    <li><a href="https://www.amnesty.org/es/" target="_blank">Amnistía Internacional (Informes y Campañas Globales)</a></li>
+                    <li><a href="https://www.hrw.org/es" target="_blank">Human Rights Watch (Investigaciones y Noticias)</a></li>
+                    <li><a href="https://www.unicef.org/es/convencion-derechos-nino" target="_blank">Convención sobre los Derechos del Niño (UNICEF)</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=M99b2X_l1tI" target="_blank">Video: ¿Qué son los Derechos Humanos? (UN)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        
+<section id="creadores" class="content-section">
+            <div class="container creators-content">
+                <h2>Arquitectos de este Espacio Digital</h2>
+                <div class="creator-info">
+                    <h3>Desarrollador Principal (Estudiante)</h3>
+                    <p><strong>Cristhian Yadiel Castillo Mori</strong></p>
+                    <p>Estudiante visionario y creativo, impulsor de la tecnología al servicio de la conciencia social y la defensa de los derechos fundamentales.</p>
+                </div>
+                <div class="creator-info">
+                    <h3>Guía y Mentor (Profesor)</h3>
+                    <p><strong>Wilder Lopez Perez</strong></p>
+                    <p>Educador comprometido y guía inspirador, dedicado a formar nuevas generaciones con un profundo sentido de la justicia y el respeto por los derechos humanos.</p>
+                </div>
+                <img src="IMAGENES 2/IMAGEN 1.jpg" alt="Insignia de la Institución Educativa I.E. Parroquial Nuestra Señora de la Anunciación - Huacho" class="institution-logo">
+            </div>
+        </section>
+
+        
+<section id="contacto" class="content-section">
+            <div class="container">
+                <h2>Conéctate con Nosotros: Tu Voz Es Vital</h2>
+                <p>Si tienes preguntas, sugerencias, deseas colaborar o simplemente quieres compartir tus ideas sobre los Derechos Humanos, no dudes en contactarnos. Cada interacción contribuye a fortalecer nuestra comunidad y expandir el mensaje.</p>
+                <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form"> 
+<input type="text" name="name" placeholder="Tu Nombre y Apellido" required>
+                    <input type="email" name="_replyto" placeholder="Tu Correo Electrónico (requerido)" required>
+                    <textarea name="message" placeholder="Tu mensaje detallado aquí..." rows="7" required></textarea>
+                    <button type="submit" class="btn">Enviar Comunicación</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Los Derechos Humanos. Proyecto Educativo.</p>
+            <p>Con el compromiso y dedicación de la I.E. Parroquial Nuestra Señora de la Anunciación - Huacho.</p>
+        </div>
+    </footer>
+
+    
+<script>
+        // Función para alternar la visibilidad del menú móvil
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const burger = document.querySelector('.burger');
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+
+            // Añadir animación escalonada a los enlaces del menú
+            const navItems = document.querySelectorAll('.nav-links li');
+            navItems.forEach((item, index) => {
+                if (navLinks.classList.contains('nav-active')) {
+                    item.style.setProperty('--delay', `${index * 0.1}s`);
+                    item.style.opacity = '1';
+                } else {
+                    item.style.setProperty('--delay', '0s');
+                    item.style.opacity = '0';
+                }
+            });
+        }
+
+        // Smooth scrolling para la navegación interna
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks.classList.contains('nav-active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
